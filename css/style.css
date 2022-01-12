@@ -28,24 +28,17 @@
 .chat-list{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
-    background-color: #92DBA4;
     border-radius:30px;
     padding:20px;
-}
+}   
 .chat-list img{
     height:90px;
     width:200px;
 }
 .chat{
-    margin-bottom:20px;
+    margin-bottom:40px;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-body{
-    background-color: #2A7F6D;
-}
-h1{
-color: #E9EECC;  
 }

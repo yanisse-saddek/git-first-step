@@ -6,45 +6,140 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css">
     </head>
-
     <body>
-        <div class="app">
-            <div class="top">
-                <p>Blablabla</p>
-            </div>
-            <div class="bottom">
-                <div class="chat-list">
-                    <div class="chat">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
-                        <p>Le chat</p>
-                    </div>
-                    <div class="chat">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
-                        <p>Le chat</p>
-                    </div>
-                    <div class="chat">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
-                        <p>Le chat</p>
-                    </div>
-                    <div class="chat">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
-                        <p>Le chat</p>
-                    </div>
-                    <div class="chat">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
-                        <p>Le chat</p>
-                    </div>
-                    <div class="chat">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
-                        <p>Le chat</p>
-                    </div>
-                    <div class="chat">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
-                        <p>Le chat</p>
+        <div class="load" id="load">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paw" class="svg-inline--fa fa-paw fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 224c-79.41 0-192 122.76-192 200.25 0 34.9 26.81 55.75 71.74 55.75 48.84 0 81.09-25.08 120.26-25.08 39.51 0 71.85 25.08 120.26 25.08 44.93 0 71.74-20.85 71.74-55.75C448 346.76 335.41 224 256 224zm-147.28-12.61c-10.4-34.65-42.44-57.09-71.56-50.13-29.12 6.96-44.29 40.69-33.89 75.34 10.4 34.65 42.44 57.09 71.56 50.13 29.12-6.96 44.29-40.69 33.89-75.34zm84.72-20.78c30.94-8.14 46.42-49.94 34.58-93.36s-46.52-72.01-77.46-63.87-46.42 49.94-34.58 93.36c11.84 43.42 46.53 72.02 77.46 63.87zm281.39-29.34c-29.12-6.96-61.15 15.48-71.56 50.13-10.4 34.65 4.77 68.38 33.89 75.34 29.12 6.96 61.15-15.48 71.56-50.13 10.4-34.65-4.77-68.38-33.89-75.34zm-156.27 29.34c30.94 8.14 65.62-20.45 77.46-63.87 11.84-43.42-3.64-85.21-34.58-93.36s-65.62 20.45-77.46 63.87c-11.84 43.42 3.64 85.22 34.58 93.36z"></path></svg>
+        </div>
+        <div id="app">
+            <nav>    
+                <div class="nav-left">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="paw" class="svg-inline--fa fa-paw fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 224c-79.41 0-192 122.76-192 200.25 0 34.9 26.81 55.75 71.74 55.75 48.84 0 81.09-25.08 120.26-25.08 39.51 0 71.85 25.08 120.26 25.08 44.93 0 71.74-20.85 71.74-55.75C448 346.76 335.41 224 256 224zm-147.28-12.61c-10.4-34.65-42.44-57.09-71.56-50.13-29.12 6.96-44.29 40.69-33.89 75.34 10.4 34.65 42.44 57.09 71.56 50.13 29.12-6.96 44.29-40.69 33.89-75.34zm84.72-20.78c30.94-8.14 46.42-49.94 34.58-93.36s-46.52-72.01-77.46-63.87-46.42 49.94-34.58 93.36c11.84 43.42 46.53 72.02 77.46 63.87zm281.39-29.34c-29.12-6.96-61.15 15.48-71.56 50.13-10.4 34.65 4.77 68.38 33.89 75.34 29.12 6.96 61.15-15.48 71.56-50.13 10.4-34.65-4.77-68.38-33.89-75.34zm-156.27 29.34c30.94 8.14 65.62-20.45 77.46-63.87 11.84-43.42-3.64-85.21-34.58-93.36s-65.62 20.45-77.46 63.87c-11.84 43.42 3.64 85.22 34.58 93.36z"></path></svg>
+                    <p>blablabla</p>
+                </div>
+
+                <div class="nav-right">          
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" class="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>
+                </div>
+            </nav>
+            <div class="app">
+                <div class="top">
+                    <p class="title">Blablabla</p>
+                    <div class="top-bottom">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni est error at nobis fugiat tenetur consequatur exercitationem, veniam soluta quidem quas doloremque inventore. Accusantium perspiciatis necessitatibus nesciunt, repellat excepturi cupiditate?</p>
+                    <a href="#bottom">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"></path></svg>
+                    </a>
                     </div>
                 </div>
+                <div class="bottom" id="bottom">  
+                    <p class="title">Blablablabla</p>
+                    <div class="chat-list">
+                        <div class="chat">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
+                            <p>Le chat</p>
+                        </div>
+                        <div class="chat">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
+                            <p>Le chat</p>
+                        </div>
+                        <div class="chat">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
+                            <p>Le chat</p>
+                        </div>
+                        <div class="chat">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
+                            <p>Le chat</p>
+                        </div>
+                        <div class="chat">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
+                            <p>Le chat</p>
+                        </div>
+                        <div class="chat">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
+                            <p>Le chat</p>
+                        </div>
+                        <div class="chat">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaPgZ8kVWpdSC0VSqPlEIn2l-X4EF8c_GcUw&usqp=CAU" alt="">
+                            <p>Le chat</p>
+                        </div>
+                    </div>
+                    <div class="part"></div>
+                    <p class="title">Blablablacbla</p>
+                    <div class="section">
+                        <div class="left">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbvDLUtD7Mx6yLGWgtQgxKY0-cZZ2MeY_ahg&usqp=CAU" alt="">
+                        </div>
+                        <div class="right">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non laudantium vero ullam voluptatibus numquam, harum dolores. Vel numquam, totam dolore placeat fugit natus, quae pariatur deleniti odit quod dolorem! Culpa? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat animi iste enim laboriosam reiciendis, voluptas accusamus totam aperiam fugit libero laborum alias culpa atque error quisquam corporis quis quae eos? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem quasi suscipit expedita error? Aut velit illum reprehenderit dolorem unde dolor, repellat provident, possimus excepturi natus animi modi fugit odit quam.</p>
+                            <a class="right-btn" href="">Blablablabla</a>
+                        </div>
+                        
+                    </div>
+                    <div class="part"></div>
+
+                    <p class="title">Blablablabla</p>
+                        <div class="timeline">
+                            <ul>
+                                <li>
+                                    <div class="timeline-content">
+                                        <p class="timeline-title">by proute</p>
+                                        <p class="timeline-date">18 proute 2019</p>
+                                        <div class="timeline-detail">
+                                            <img src="https://www.jardiner-malin.fr/wp-content/uploads/2020/05/Chat-qui-petrit-petrissage.jpg" alt="">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nisi consequuntur aliquid itaque sunt possimus, aspernatur corrupti repellat! Illum ipsum officiis maiores labore quisquam nihil saepe similique ex recusandae voluptatibus?</p>
+                                        </div>                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-content">
+                                        <p class="timeline-title">by proute</p>
+                                        <p class="timeline-date">18 proute 2019</p>
+                                        <div class="timeline-detail">
+                                            <img src="https://www.jardiner-malin.fr/wp-content/uploads/2020/05/Chat-qui-petrit-petrissage.jpg" alt="">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nisi consequuntur aliquid itaque sunt possimus, aspernatur corrupti repellat! Illum ipsum officiis maiores labore quisquam nihil saepe similique ex recusandae voluptatibus?</p>
+                                        </div>                                    
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="timeline-content">
+                                        <p class="timeline-title">by proute</p>
+                                        <p class="timeline-date">18 proute 2019</p>
+                                        <div class="timeline-detail">
+                                            <img src="https://www.jardiner-malin.fr/wp-content/uploads/2020/05/Chat-qui-petrit-petrissage.jpg" alt="">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nisi consequuntur aliquid itaque sunt possimus, aspernatur corrupti repellat! Illum ipsum officiis maiores labore quisquam nihil saepe similique ex recusandae voluptatibus?</p>
+                                        </div>                                    
+                                    </div>
+                                </li>
+                            </ul>
+                    </div>
+
+
+                        <p class="title">Blablablabla</p>
+                        <div class="social">                   
+
+                            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="twitter" class="svg-inline--fa fa-twitter fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+                            <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>
+                        </div>  
+                        <div class="section-up">
+                            <div class="up">
+                                <a href="#"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-up" class="svg-inline--fa fa-chevron-up fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"></path></svg></a>
+                            </div>
+                        </div>
+                </div>
             </div>
-            <a href="#">aaa</a>
+            <div class="footer">
+                <div>
+                    <p class="footer-title">Blablablabla</p>
+                    <p class="footer-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae molestias, dolorum quod nesciunt quisquam earum labore at rerum adipisci unde, itaque amet cumque perspiciatis, assumenda ad. Repudiandae, iusto itaque.</p>
+                </div>
+                <div>
+                    <p class="footer-title">Blablablabla</p>
+                    <p class="footer-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos repudiandae molestias, dolorum quod nesciunt quisquam earum labore at rerum adipisci unde, itaque amet cumque perspiciatis, assumenda ad. Repudiandae, iusto itaque.</p>
+                </div>
+                <div class="mapouter"><div class="gmap_canvas"><iframe width="400" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com"></a><br><style>.mapouter{position:relative;text-align:right;height:200px;width:400px;}</style><a href="https://www.embedgooglemap.net">google maps on my website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:200px;width:400px;}</style></div></div>
+            </div>
         </div>
     </body>
+    <script src="js/script.js"></script>
 </html>
